@@ -20,7 +20,7 @@
 		
 6. Game score: **"Player 'score' : Computer 'score'"**
 
-7. When user type 'q' to quit the game, on screen appear game results: **"Final score: Player <score> == Compyter <score> Player/Computer win"**
+7. When user type 'q' to quit the game, on screen appear game results: **"Final score: Player <score> == Computer <score> Player/Computer win"**
 
 
 
