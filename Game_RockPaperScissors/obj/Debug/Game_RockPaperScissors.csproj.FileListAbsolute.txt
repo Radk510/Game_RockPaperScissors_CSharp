@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\bin\Debug\Game_RockPaperScissors.exe.config
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\bin\Debug\Game_RockPaperScissors.exe
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\bin\Debug\Game_RockPaperScissors.pdb
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\bin\Debug\Markdown.dll
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\obj\Debug\Game_RockPaperScissors.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\obj\Debug\Game_RockPaperScissors.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\obj\Debug\Game_RockPaperScissors.csproj.CopyComplete
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\obj\Debug\Game_RockPaperScissors.exe
+C:\Users\Admin\source\repos\Game_RockPaperScissors\Game_RockPaperScissors\obj\Debug\Game_RockPaperScissors.pdb

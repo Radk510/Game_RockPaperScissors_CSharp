@@ -48,13 +48,22 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="View\GameView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Structure\structure.md" />
+    <None Include="Structure\basic_description.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Structure\model_description.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Structure\view_description.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
