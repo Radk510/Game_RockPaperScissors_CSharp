@@ -7,7 +7,7 @@
 2. *GetCurrentDateView()* - in this method we get current date in default form
 
 
-3. ChoseWhatToUseView() - this method gets an apportunity to user to chose what to use: Rock, Paper or Scissors
+3. ChoseWhatToUse() - this method gets an apportunity to user to chose what to use: Rock, Paper or Scissors
 
 1.1. **How it's works:** 
 - In this method we print to console a question: Chose what you want to use: Rock (press 'r'), Paper (press 'p') or Scissors (press 's')

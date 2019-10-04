@@ -19,11 +19,13 @@ namespace Game_RockPaperScissors.View
             return title;
         }
 
+
+
         /// <summary>
         /// In this method user can chose what to use in game or quit the game
         /// </summary>
         /// <returns></returns>
-        public string ChoseWhatToUseView()
+        public string ChoseWhatToUse()
         {
             Console.WriteLine("Chose what you want to use:\n Rock (press 'r'),\n Paper (press 'p'),\n Scissors (press 's')");
             Console.WriteLine("To quit the game press 'q'");
