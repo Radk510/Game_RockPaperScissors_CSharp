@@ -10,19 +10,19 @@ namespace Game_RockPaperScissors.Controller
 {
     class GameController
     {
-        GameView gameView = new GameView();
+        UserModel gameView = new UserModel();
         ComputerModel computerModel = new ComputerModel();
 
         /// <summary>
         /// Game score
         /// </summary>
-        private int player_score = 0;
-        private int computer_score = 0;
+        public int player_score = 0;
+        public int computer_score = 0;
 
         /// <summary>
         /// Main operation where programm decide who win
         /// </summary>
-        /// <returns></returns>
+        /// <returns></returns>                    
         public string WhoWinRound()
         {
             if (
@@ -45,6 +45,32 @@ namespace Game_RockPaperScissors.Controller
             {
                 return "Draw";
             }
-        }       
+        }   
+        
+        /// <summary>
+        /// Here values in score variables increased
+        /// </summary>
+        /// <returns></returns>
+        public int ScoreIncrease()
+        {
+            if (WhoWinRound() == "Player win")
+            {
+                return player_score++;
+            }
+            else if (WhoWinRound() == "Computer win")
+            {
+                return computer_score++;
+            }
+            else if (WhoWinRound() == "Draw")
+            {
+                return 0;
+            }
+            else
+            {
+                return 0;
+            }
+
+            
+        }
     }
 }

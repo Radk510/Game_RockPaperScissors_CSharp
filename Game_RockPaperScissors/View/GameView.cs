@@ -8,65 +8,72 @@ namespace Game_RockPaperScissors.View
 {
     class GameView
     {
+        /// <summary>
+        /// Current date
+        /// </summary>
+        /// <returns></returns>
         private DateTime GetCurrentDateView()
         {
             DateTime date = DateTime.Now;
             return date;
         }
-        public string GameTitlesView()
-        {
-            string title = "Console Game: \"Rock, Paper, Scissors\" " + GetCurrentDateView();
-            return title;
-        }
-
-
 
         /// <summary>
-        /// In this method user can chose what to use in game or quit the game
+        /// Game titels
         /// </summary>
         /// <returns></returns>
-        public string ChoseWhatToUse()
+        public void GameTitlesView()
         {
-            Console.WriteLine("Chose what you want to use:\n Rock (press 'r'),\n Paper (press 'p'),\n Scissors (press 's')");
-            Console.WriteLine("To quit the game press 'q'");
-            Console.Write("Write your choise here: ");
-            string user_choice = Console.ReadLine().ToLower();
-            switch (user_choice)
-            {
-                case "r":
-                    return "Rock";
-                case "p":
-                    return "Paper";
-                case "s":
-                    return "Scissors";
-                case "q":
-                    return "quit";
-                default:
-                    return user_choice;
-            }
+            Console.WriteLine("Console Game: \"Rock, Paper, Scissors\" " + GetCurrentDateView());
         }
 
-        public void RoundResultsView(string player_choice, string computer_choice)
+        /// <summary>
+        /// Number of game round
+        /// </summary>
+        public void GameRound()
+        {
+            int number = 1;
+            Console.WriteLine($"Round № {number++}");
+        }
+
+        /// <summary>
+        /// What player and computer choose to play
+        /// </summary>
+        /// <param name="player_choice"></param> 
+        /// <param name="computer_choice"></param>
+        public void PlayersChoiceView(string player_choice, string computer_choice)
         {
             Console.WriteLine($"Player choise: {player_choice} ===== Computer choise {computer_choice}");
             // TODO: add logic to "who win" view
-            
         }
 
-        public string GameScoreView()
-        {
-            //TODO: add view to game score
-            return "game score";
-        } 
-
-        public void GameFinalScore(int player_score, int computer_score)
-        {
-            if (ChoseWhatToUseView() == "quit")
-            {
-                Console.WriteLine("Finale score");
-                Console.WriteLine($"Player score: {player_score} ===== Computer score: {computer_score}");
-                //TODO: add who win whole game
-            }
+        /// <summary>
+        /// Who win the round
+        /// </summary>
+        /// <param name="whoWinRound"></param>
+        public void RoundResult(string whoWinRound)
+        {            
+            Console.WriteLine(whoWinRound);
         }
+
+        /// <summary>
+        /// This method gets values of variables from GameController class that hold game score 
+        /// </summary>
+        /// <param name="player_score"></param> user points
+        /// <param name="compyter_score"></param> compyter points
+        public void GameScoreView(int player_score, int compyter_score)
+        {            
+            Console.WriteLine($"Player score: {player_score} ===== Computer score: {compyter_score}");
+        }
+
+        //public void GameFinalScore(int player_score, int computer_score)
+        //{
+        //    if (PlayerChoice() == "quit")
+        //    {
+        //        Console.WriteLine("Finale score");
+        //        Console.WriteLine($"Player score: {player_score} ===== Computer score: {computer_score}");
+        //        //TODO: add who win whole game
+        //    }
+        //}
     }
 }
