@@ -28,8 +28,8 @@ namespace Game_RockPaperScissors.View
             Console.WriteLine("Chose what you want to use:\n Rock (press 'r'),\n Paper (press 'p'),\n Scissors (press 's')");
             Console.WriteLine("To quit the game press 'q'");
             Console.Write("Write your choise here: ");
-            string user_choise = Console.ReadLine().ToLower();
-            switch (user_choise)
+            string user_choice = Console.ReadLine().ToLower();
+            switch (user_choice)
             {
                 case "r":
                     return "Rock";
@@ -40,13 +40,13 @@ namespace Game_RockPaperScissors.View
                 case "q":
                     return "quit";
                 default:
-                    return user_choise;
+                    return user_choice;
             }
         }
 
-        public void RoundResultsView(string player_choise, string computer_choise)
+        public void RoundResultsView(string player_choice, string computer_choice)
         {
-            Console.WriteLine($"Player choise: {player_choise} ===== Computer choise {computer_choise}");
+            Console.WriteLine($"Player choise: {player_choice} ===== Computer choise {computer_choice}");
             // TODO: add logic to "who win" view
             
         }
