@@ -56,14 +56,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Structure\basic_description.md" />
+    <None Include="Specification\basic_description.md" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Structure\model_description.md" />
+    <None Include="Specification\model_description.md" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Structure\view_description.md" />
+    <None Include="Specification\view_description.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
