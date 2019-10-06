@@ -10,7 +10,7 @@ namespace Game_RockPaperScissors.Controller
 {
     class GameController
     {
-        UserModel gameView = new UserModel();
+        UserModel userModel = new UserModel();
         ComputerModel computerModel = new ComputerModel();
 
         /// <summary>
@@ -23,20 +23,20 @@ namespace Game_RockPaperScissors.Controller
         /// Main operation where programm decide who win
         /// </summary>
         /// <returns></returns>                    
-        public string WhoWinRound()
+        public string WhoWinRound(string player_choice, string computer_choice)
         {
             if (
-                (gameView.PlayerChoice() == "Rock" && computerModel.ComputerChoice() == "Scissors") ||
-                (gameView.PlayerChoice() == "Scissors" && computerModel.ComputerChoice() == "Paper") ||
-                (gameView.PlayerChoice() == "Paper" && computerModel.ComputerChoice() == "Rock")
+                (player_choice == "Rock" && computer_choice == "Scissors") ||
+                (player_choice == "Scissors" && computer_choice == "Paper") ||
+                (player_choice == "Paper" && computer_choice == "Rock")
                )
             {
                 return "Player win";
             }
             else if (
-                     (gameView.PlayerChoice() == "Scissors" && computerModel.ComputerChoice() == "Rock") ||
-                     (gameView.PlayerChoice() == "Paper" && computerModel.ComputerChoice() == "Scissors") ||
-                     (gameView.PlayerChoice() == "Rock" && computerModel.ComputerChoice() == "Paper")
+                     (player_choice == "Scissors" && computer_choice == "Rock") ||
+                     (player_choice == "Paper" && computer_choice == "Scissors") ||
+                     (player_choice == "Rock" && computer_choice == "Paper")
                     )
             {
                 return "Computer win";
@@ -51,26 +51,24 @@ namespace Game_RockPaperScissors.Controller
         /// Here values in score variables increased
         /// </summary>
         /// <returns></returns>
-        public int ScoreIncrease()
-        {
-            if (WhoWinRound() == "Player win")
-            {
-                return player_score++;
-            }
-            else if (WhoWinRound() == "Computer win")
-            {
-                return computer_score++;
-            }
-            else if (WhoWinRound() == "Draw")
-            {
-                return 0;
-            }
-            else
-            {
-                return 0;
-            }
-
-            
-        }
+        //public int ScoreIncrease()
+        //{
+        //    if (WhoWinRound() == "Player win")
+        //    {
+        //        return player_score++;
+        //    }
+        //    else if (WhoWinRound() == "Computer win")
+        //    {
+        //        return computer_score++;
+        //    }
+        //    else if (WhoWinRound() == "Draw")
+        //    {
+        //        return 0;
+        //    }
+        //    else
+        //    {
+        //        return 0;
+        //    }
+        //}
     }
 }

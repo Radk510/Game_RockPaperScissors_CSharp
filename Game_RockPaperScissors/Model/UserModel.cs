@@ -18,21 +18,38 @@ namespace Game_RockPaperScissors
             Console.WriteLine("To quit the game press 'q'");
             Console.Write("Write your choise here: ");
             string user_choice = Console.ReadLine().ToLower();
+            bool wrongUserChoice = false;
+            if (user_choice != "r" && user_choice != "p" && user_choice != "s" && user_choice != "q")
+            {
+                wrongUserChoice = true;
+            }
+            while (wrongUserChoice)
+            {
+                Console.Write("Type your choice again: ");
+                user_choice = Console.ReadLine().ToLower();
+                if (user_choice == "r" || user_choice == "p" || user_choice == "s" || user_choice == "q")
+                {
+                    wrongUserChoice = false;
+                }
+            }
             switch (user_choice)
             {
                 case "r":
-                    return "Rock";
+                    user_choice = "Rock";
+                    break;
                 case "p":
-                    return "Paper";
+                    user_choice = "Paper";
+                    break;
                 case "s":
-                    return "Scissors";
+                    user_choice = "Scissors";
+                    break;
                 case "q":
-                    return "quit";
+                    user_choice = "quit";
+                    break;
                 default:
                     return user_choice;
             }
+            return user_choice;
         }
-
-
     }
 }

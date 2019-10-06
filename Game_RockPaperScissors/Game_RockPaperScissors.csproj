@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GameController.cs" />
     <Compile Include="Model\ComputerModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,7 +63,9 @@
   <ItemGroup>
     <None Include="Specification\model_description.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Specification\controller_description.md" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Specification\view_description.md" />
   </ItemGroup>
