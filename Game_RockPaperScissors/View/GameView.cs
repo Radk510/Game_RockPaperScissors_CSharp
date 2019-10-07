@@ -69,14 +69,24 @@ namespace Game_RockPaperScissors.View
             Console.WriteLine($"Player score: {player_score} ===== Computer score: {compyter_score}");
         }
 
-        //public void GameFinalScore(int player_score, int computer_score)
-        //{
-        //    if (PlayerChoice() == "quit")
-        //    {
-        //        Console.WriteLine("Finale score");
-        //        Console.WriteLine($"Player score: {player_score} ===== Computer score: {computer_score}");
-        //        //TODO: add who win whole game
-        //    }
-        //}
+        public void GameFinalScore(int player_score, int computer_score)
+        {
+            
+            Console.WriteLine("Finale score");
+            Console.WriteLine($"Player score: {player_score} ===== Computer score: {computer_score}");
+            if (player_score > computer_score)
+            {
+                Console.WriteLine("Player win the Game!");
+            }
+            else if (player_score < computer_score)
+            {
+                Console.WriteLine("Computer win the Game!");
+            }
+            else
+            {
+                Console.WriteLine("It\'s draw!");
+            }
+            
+        }
     }
 }

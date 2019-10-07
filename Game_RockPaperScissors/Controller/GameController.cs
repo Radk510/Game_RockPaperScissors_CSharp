@@ -9,7 +9,8 @@ using Game_RockPaperScissors.View;
 namespace Game_RockPaperScissors.Controller
 {
     class GameController
-    {   
+    {
+        GameView gameView = new GameView();
         /// <summary>
         /// Game score
         /// </summary>
@@ -21,9 +22,13 @@ namespace Game_RockPaperScissors.Controller
         /// </summary>
         /// <returns></returns> 
         
-        
-            
-
+        public void QuitGame(string user_choice)
+        {
+            if (user_choice == "quit")
+            {
+                gameView.GameFinalScore(player_score, computer_score);
+            }
+        } 
         public string WhoWinRound(string player_choice, string computer_choice)
         {
             if (
@@ -49,30 +54,5 @@ namespace Game_RockPaperScissors.Controller
                 return "Draw";
             }
         }   
-
-        
-        /// <summary>
-        /// Here values in score variables increased
-        /// </summary>
-        /// <returns></returns>
-        //public int ScoreIncrease()
-        //{
-        //    if (WhoWinRound() == "Player win")
-        //    {
-        //        return player_score++;
-        //    }
-        //    else if (WhoWinRound() == "Computer win")
-        //    {
-        //        return computer_score++;
-        //    }
-        //    else if (WhoWinRound() == "Draw")
-        //    {
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        return 0;
-        //    }
-        //}
     }
 }
