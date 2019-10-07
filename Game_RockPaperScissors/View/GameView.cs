@@ -31,8 +31,12 @@ namespace Game_RockPaperScissors.View
         /// <returns></returns>
         public void GameTitlesView()
         {
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Console Game: \"Rock, Paper, Scissors\" " + GetCurrentDateView());
             Console.WriteLine();
+            Console.ResetColor();
+
         }
 
         /// <summary>
@@ -40,9 +44,10 @@ namespace Game_RockPaperScissors.View
         /// </summary>
         public void GameRound()
         {
-            Console.WriteLine();
-            Console.WriteLine($"Round № {gameRound++}");
-            Console.WriteLine();
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"\nRound № {gameRound++}\n");
+            Console.ResetColor();
         }
 
         /// <summary>
@@ -51,9 +56,8 @@ namespace Game_RockPaperScissors.View
         /// <param name="player_choice"></param> 
         /// <param name="computer_choice"></param>
         public void PlayersChoiceView(string player_choice, string computer_choice)
-        {
-            Console.WriteLine();
-            Console.WriteLine($"Player choise: {player_choice} ===== Computer choise {computer_choice}");
+        {            
+            Console.WriteLine($"\n\nPlayer choise: {player_choice} ///// Computer choise: {computer_choice}\n");
         }
 
         /// <summary>
@@ -72,7 +76,13 @@ namespace Game_RockPaperScissors.View
         /// <param name="compyter_score"></param> compyter points
         public void GameScoreView(int player_score, int compyter_score)
         {            
-            Console.WriteLine($"Player score: {player_score} ===== Computer score: {compyter_score}");
+            Console.WriteLine($"Player score: {player_score} <=====> Computer score: {compyter_score}");
+        }
+
+        public void EndOfRoundView()
+        {
+            String bottomLine = new String('=', Console.WindowWidth);
+            Console.WriteLine(bottomLine);
         }
 
         /// <summary>
@@ -82,22 +92,33 @@ namespace Game_RockPaperScissors.View
         /// <param name="computer_score"></param>
         public void GameFinalScore(int player_score, int computer_score)
         {
-            
-            Console.WriteLine("Finale score");
-            Console.WriteLine($"Player score: {player_score} ===== Computer score: {computer_score}");
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\n\nFinale score\n");
+            Console.ResetColor();
+            Console.WriteLine($"Player score: {player_score} <=====> Computer score: {computer_score}");
             if (player_score > computer_score)
             {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
                 Console.WriteLine("Player win the Game!");
+                Console.ResetColor();
             }
             else if (player_score < computer_score)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Computer win the Game!");
+                Console.ResetColor();
             }
             else
             {
+                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("It\'s draw!");
+                Console.ResetColor();
             }
-            
+
         }
     }
 }

@@ -14,8 +14,14 @@ namespace Game_RockPaperScissors
         /// <returns></returns>
         public string PlayerChoice()
         {
-            Console.WriteLine("Chose what you want to use:\n Rock (press 'r'),\n Paper (press 'p'),\n Scissors (press 's')");
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("\nChose what you want to use:\n Rock (press 'r'),\n Paper (press 'p'),\n Scissors (press 's')");
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("To quit the game press 'q'");
+            Console.ResetColor();
             Console.Write("Write your choise here: ");
             string user_choice = Console.ReadLine().ToLower();
             bool wrongUserChoice = false;

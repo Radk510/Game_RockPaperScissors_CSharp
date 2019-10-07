@@ -30,9 +30,10 @@ namespace Game_RockPaperScissors
                     break;
                 }
                 string whoWin = gameController.WhoWinRound(player_choice, computer_choice);
-                gameView.PlayersChoiceView(player_choice, computer_choice);
+                gameView.PlayersChoiceView(player_choice, computer_choice);                
                 gameView.RoundResult(whoWin);
                 gameView.GameScoreView(gameController.player_score, gameController.computer_score);
+                gameView.EndOfRoundView();
             }
 
 
