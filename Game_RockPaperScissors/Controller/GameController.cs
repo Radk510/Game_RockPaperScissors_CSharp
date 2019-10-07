@@ -9,10 +9,7 @@ using Game_RockPaperScissors.View;
 namespace Game_RockPaperScissors.Controller
 {
     class GameController
-    {
-        UserModel userModel = new UserModel();
-        ComputerModel computerModel = new ComputerModel();
-
+    {   
         /// <summary>
         /// Game score
         /// </summary>
@@ -22,7 +19,11 @@ namespace Game_RockPaperScissors.Controller
         /// <summary>
         /// Main operation where programm decide who win
         /// </summary>
-        /// <returns></returns>                    
+        /// <returns></returns> 
+        
+        
+            
+
         public string WhoWinRound(string player_choice, string computer_choice)
         {
             if (
@@ -31,6 +32,7 @@ namespace Game_RockPaperScissors.Controller
                 (player_choice == "Paper" && computer_choice == "Rock")
                )
             {
+                player_score++;
                 return "Player win";
             }
             else if (
@@ -39,6 +41,7 @@ namespace Game_RockPaperScissors.Controller
                      (player_choice == "Rock" && computer_choice == "Paper")
                     )
             {
+                computer_score++;
                 return "Computer win";
             }
             else
@@ -46,6 +49,7 @@ namespace Game_RockPaperScissors.Controller
                 return "Draw";
             }
         }   
+
         
         /// <summary>
         /// Here values in score variables increased

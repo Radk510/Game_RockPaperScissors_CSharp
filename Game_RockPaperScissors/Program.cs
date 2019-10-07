@@ -24,8 +24,9 @@ namespace Game_RockPaperScissors
             string player_choice = userModel.PlayerChoice();
             string computer_choice = computerModel.ComputerChoice();
             string whoWin = gameController.WhoWinRound(player_choice, computer_choice);
-            Console.WriteLine(computer_choice);
-            Console.WriteLine(whoWin);
+            gameView.PlayersChoiceView(player_choice, computer_choice);
+            gameView.RoundResult(whoWin);
+            gameView.GameScoreView(gameController.player_score, gameController.computer_score);
 
 
 

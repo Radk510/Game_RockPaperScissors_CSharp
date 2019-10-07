@@ -25,6 +25,7 @@ namespace Game_RockPaperScissors.View
         public void GameTitlesView()
         {
             Console.WriteLine("Console Game: \"Rock, Paper, Scissors\" " + GetCurrentDateView());
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -32,8 +33,10 @@ namespace Game_RockPaperScissors.View
         /// </summary>
         public void GameRound()
         {
+            Console.WriteLine();
             int number = 1;
             Console.WriteLine($"Round № {number++}");
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -43,8 +46,8 @@ namespace Game_RockPaperScissors.View
         /// <param name="computer_choice"></param>
         public void PlayersChoiceView(string player_choice, string computer_choice)
         {
+            Console.WriteLine();
             Console.WriteLine($"Player choise: {player_choice} ===== Computer choise {computer_choice}");
-            // TODO: add logic to "who win" view
         }
 
         /// <summary>
@@ -52,7 +55,7 @@ namespace Game_RockPaperScissors.View
         /// </summary>
         /// <param name="whoWinRound"></param>
         public void RoundResult(string whoWinRound)
-        {            
+        {
             Console.WriteLine(whoWinRound);
         }
 
