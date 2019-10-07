@@ -10,7 +10,6 @@ namespace Game_RockPaperScissors.Controller
 {
     class GameController
     {
-        GameView gameView = new GameView();
         /// <summary>
         /// Game score
         /// </summary>
@@ -22,13 +21,6 @@ namespace Game_RockPaperScissors.Controller
         /// </summary>
         /// <returns></returns> 
         
-        public void QuitGame(string user_choice)
-        {
-            if (user_choice == "quit")
-            {
-                gameView.GameFinalScore(player_score, computer_score);
-            }
-        } 
         public string WhoWinRound(string player_choice, string computer_choice)
         {
             if (

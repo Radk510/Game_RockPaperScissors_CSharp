@@ -8,6 +8,13 @@ namespace Game_RockPaperScissors.View
 {
     class GameView
     {
+
+        /// <summary>
+        /// The game round variable
+        /// </summary>
+        public int gameRound = 1;
+
+
         /// <summary>
         /// Current date
         /// </summary>
@@ -29,18 +36,17 @@ namespace Game_RockPaperScissors.View
         }
 
         /// <summary>
-        /// Number of game round
+        /// Game round counter
         /// </summary>
         public void GameRound()
         {
             Console.WriteLine();
-            int number = 1;
-            Console.WriteLine($"Round № {number++}");
+            Console.WriteLine($"Round № {gameRound++}");
             Console.WriteLine();
         }
 
         /// <summary>
-        /// What player and computer choose to play
+        /// Show what player and computer choose to play
         /// </summary>
         /// <param name="player_choice"></param> 
         /// <param name="computer_choice"></param>
@@ -51,7 +57,7 @@ namespace Game_RockPaperScissors.View
         }
 
         /// <summary>
-        /// Who win the round
+        /// Show who win the round
         /// </summary>
         /// <param name="whoWinRound"></param>
         public void RoundResult(string whoWinRound)
@@ -69,6 +75,11 @@ namespace Game_RockPaperScissors.View
             Console.WriteLine($"Player score: {player_score} ===== Computer score: {compyter_score}");
         }
 
+        /// <summary>
+        /// Show what final score and who win the game when user want to quit the game
+        /// </summary>
+        /// <param name="player_score"></param>
+        /// <param name="computer_score"></param>
         public void GameFinalScore(int player_score, int computer_score)
         {
             

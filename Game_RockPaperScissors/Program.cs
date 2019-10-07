@@ -19,15 +19,21 @@ namespace Game_RockPaperScissors
             GameController gameController = new GameController();
 
             gameView.GameTitlesView();
-
-            gameView.GameRound();
-            string player_choice = userModel.PlayerChoice();
-            string computer_choice = computerModel.ComputerChoice();
-            string whoWin = gameController.WhoWinRound(player_choice, computer_choice);
-            gameView.PlayersChoiceView(player_choice, computer_choice);
-            gameView.RoundResult(whoWin);
-            gameView.GameScoreView(gameController.player_score, gameController.computer_score);
-
+            while (true)
+            {
+                gameView.GameRound();
+                string player_choice = userModel.PlayerChoice();
+                string computer_choice = computerModel.ComputerChoice();
+                if (player_choice == "quit")
+                {
+                    gameView.GameFinalScore(gameController.player_score, gameController.computer_score);
+                    break;
+                }
+                string whoWin = gameController.WhoWinRound(player_choice, computer_choice);
+                gameView.PlayersChoiceView(player_choice, computer_choice);
+                gameView.RoundResult(whoWin);
+                gameView.GameScoreView(gameController.player_score, gameController.computer_score);
+            }
 
 
         }
